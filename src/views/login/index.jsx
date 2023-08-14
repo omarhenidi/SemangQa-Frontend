@@ -11,7 +11,6 @@ class UserLogin extends Component {
       email: "",
       password: "",
       message: "",
-      loggedIn: false,
     };
   }
 
@@ -27,12 +26,7 @@ class UserLogin extends Component {
       .then((response) => {
         if (response.data.status === true) {
           localStorage.setItem("token", response.data.token);
-          this.setState({ loggedIn: true });
           console.log(response.data);
-
-          this.setState({
-            PageRedirectStatus: true,
-          });
           window.location.reload();
         } else {
 
