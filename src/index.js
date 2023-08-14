@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from "./App";
+import axios from "axios"; // Import axios here
+
+// Add a request interceptor for AXIOS AUTHENTICATION
+axios.interceptors.request.use(function (config) {
+  config.headers.Authorization = "Bearer " + localStorage.getItem("token");
+  return config;
+});
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
