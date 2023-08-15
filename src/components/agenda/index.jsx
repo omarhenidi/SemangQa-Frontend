@@ -392,7 +392,7 @@ function Agenda() {
                                                                         {/*header*/}
                                                                         <div className="flex items-start justify-between p-2 border-b border-solid border-slate-200 rounded-t">
                                                                             <h6 className="text-1xl font-semibold">
-                                                                                {event.title}
+                                                                                Edit Task
                                                                             </h6>
                                                                             <button
                                                                                 className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -409,7 +409,7 @@ function Agenda() {
                                                                             <input
                                                                                 type="text"
                                                                                 placeholder="Task"
-                                                                                value={updatedTaskData.task === "" ? event.title : updatedTaskData.task}
+                                                                                value={updatedTaskData.task}
 
                                                                                 onChange={(e) =>
                                                                                     setUpdatedTaskData((prevData) => ({

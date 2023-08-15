@@ -6,6 +6,7 @@ import {
   useSortBy,
   useTable,
 } from "react-table";
+import now from "../../assets/images/Group1.png"
 
 function TopCreatorTable(props) {
   const { columnsData, tableData } = props;
@@ -105,31 +106,8 @@ function TopCreatorTable(props) {
         </div>
         <div className="image px-4 h-175 pt-2" style={{ backgroundColor: "black", borderRadius: "20px", width: "175px" }}>
           <h4 className="text-white text-[24px]" >Upgrade Your Crowd</h4>
-          <h5 className="text-gray-400 text-[16px]" >Pro plan for better results</h5>
-
-          <div className="relative">
-            <img
-              className="absolute left-0 top-0"
-              alt="Ellipse"
-              src="https://generation-sessions.s3.amazonaws.com/90c790cbcb3ff69efaf7abf3d11cf943/img/ellipse-22.png"
-            />
-            <img
-              className="absolute left-0 top-0"
-              alt="Ellipse"
-              src="https://generation-sessions.s3.amazonaws.com/90c790cbcb3ff69efaf7abf3d11cf943/img/ellipse-23.png"
-            />
-            <img
-              className="absolute top-0 left-0"
-              alt="Ellipse"
-              src="https://generation-sessions.s3.amazonaws.com/90c790cbcb3ff69efaf7abf3d11cf943/img/ellipse-24.png"
-            />
-            <img
-              className="absolute top-0 left-0"
-              alt="Now"
-              src="https://generation-sessions.s3.amazonaws.com/90c790cbcb3ff69efaf7abf3d11cf943/img/now.png"
-            />
-          </div>
-
+          <h5 className="text-gray-400 text-[18px]" >Pro plan for better results</h5>
+          <img src={now} alt="" className="mt-1 ml-9" />
         </div>
       </div>
 
