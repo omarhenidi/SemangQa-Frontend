@@ -2,13 +2,7 @@ import React, { useEffect } from 'react';
 import Dropdown from "components/dropdown";
 import { FiAlignJustify } from "react-icons/fi";
 import LogoS from "../../assets/images/logo.png"
-import { BsArrowBarUp } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
-import {
-  IoMdNotificationsOutline,
-  IoMdInformationCircleOutline,
-} from "react-icons/io";
-
 
 
 const Navbar = (props) => {
@@ -80,10 +74,6 @@ const Navbar = (props) => {
           />
           <FiAlignJustify className="h-9 w-8 ml-5" />
         </span>
-        {/* start Notification */}
-
-
-
       </div>
     </nav>
   );

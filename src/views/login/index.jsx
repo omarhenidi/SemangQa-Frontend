@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-import "./style.css";
 import { Link, Navigate, Redirect } from "react-router-dom";
 import axios from "axios";
 import AppURL from "../../api/AppURL";

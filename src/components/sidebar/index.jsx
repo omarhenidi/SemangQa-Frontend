@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { HiX } from "react-icons/hi";
 import Links from "./components/Links";
 import routes from "routes.js";
-import Logo from "../../assets/images/logo.png"
+import Logo from "assets/images/logo.png"
 import { Link, useLocation } from "react-router-dom";
 
 // Icon Imports

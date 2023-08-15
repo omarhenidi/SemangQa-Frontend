@@ -48,7 +48,7 @@ const TotalSpent = () => {
         />
       </div>
 
-      <div className="h-full w-full " style={{ backgroundColor: "#FEFDE3" }}>
+      <div className="h-full w-full px-3 " style={{ backgroundColor: "#FEFDE3" }}>
         <div className="flex justify-between">
           <button className="rounded m-2 float-left	border-none" style={{ backgroundColor: "#FEFDE3", }}>
             <span className="text-sm font-medium text-dark " style={{ backgroundColor: "#FEFDE3", }}>Home</span>
@@ -59,7 +59,7 @@ const TotalSpent = () => {
           </button>
 
         </div>
-        <div style={{ height: "310px" }}
+        <div style={{ height: "310px"}}
         >
           <LineChart
             options={lineChartOptionsTotalSpent}

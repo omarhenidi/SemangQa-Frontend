@@ -6,7 +6,7 @@ import {
   useSortBy,
   useTable,
 } from "react-table";
-import now from "../../assets/images/Group1.png"
+import now from "assets/images/Group1.png"
 
 function TopCreatorTable(props) {
   const { columnsData, tableData } = props;
@@ -104,7 +104,7 @@ function TopCreatorTable(props) {
 
 
         </div>
-        <div className="image px-4 h-175 pt-2" style={{ backgroundColor: "black", borderRadius: "20px", width: "175px" }}>
+        <div className="image px-4 h-175 pt-2 bg-black rounded-2xl" style={{ width: "175px" }}>
           <h4 className="text-white text-[24px]" >Upgrade Your Crowd</h4>
           <h5 className="text-gray-400 text-[18px]" >Pro plan for better results</h5>
           <img src={now} alt="" className="mt-1 ml-9" />

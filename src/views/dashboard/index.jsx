@@ -8,13 +8,11 @@ import { tableColumnsTopCreators } from "variables/tableColumnsTopCreators";
 
 import { Container, Row, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css'
 class Dashboard extends Component {
 
   render() {
     const User = this.props.user;
     return (
-
       <Container>
         <Row>
           <Col md='7'>

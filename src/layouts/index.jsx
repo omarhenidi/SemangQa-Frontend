@@ -34,6 +34,7 @@ export default function Admin(props) {
     }
     return activeRoute;
   };
+
   const getActiveNavbar = (routes) => {
     let activeNavbar = false;
     for (let i = 0; i < routes.length; i++) {
@@ -45,6 +46,7 @@ export default function Admin(props) {
     }
     return activeNavbar;
   };
+  
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
@@ -57,7 +59,6 @@ export default function Admin(props) {
     });
   };
 
-  document.documentElement.dir = "ltr";
 
   return (
     <div className="flex h-full w-full" >
@@ -72,7 +73,6 @@ export default function Admin(props) {
           <div className="h-full">
             <Navbar
               onOpenSidenav={() => setOpen(true)}
-              logoText={"Horizon UI Tailwind React"}
               brandText={currentRoute}
               user={user}
               secondary={getActiveNavbar(routes)}
@@ -84,13 +84,12 @@ export default function Admin(props) {
 
                 <Route
                   path="/"
-                  element={<Navigate to="/admin/default" replace />}
+                  element={<Navigate to="/admin" replace />}
                 />
               </Routes>
             </div>
             <div className="p-3">
               <Footer />
-
             </div>
           </div>
         </main>
