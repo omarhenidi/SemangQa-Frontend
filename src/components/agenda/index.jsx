@@ -26,7 +26,12 @@ function Agenda() {
     const [image, setImage] = useState("");
     const [color, setColor] = useState("");
 
+    const [selectedTaskId, setSelectedTaskId] = useState(null);
 
+    const openUpdateModal = (id) => {
+        setSelectedTaskId(id);
+        setShowUpdateTask(true);
+    };
     const [updatedTaskData, setUpdatedTaskData] = useState({ task: "", start_time: "", end_time: "", color: "", image: null });
 
 
@@ -79,7 +84,6 @@ function Agenda() {
                     window.location.reload(); // Refresh the page
 
                 } else {
-                    window.location.reload(); // Refresh the page
                 }
             })
             .catch((error) => {
@@ -111,7 +115,16 @@ function Agenda() {
 
 
     const updateTask = (id, updatedData) => {
-        axios.put(AppURL.UpdateTask(id), updatedData)
+        console.log('Updating Task Data:', updatedData);
+
+        const formData = new FormData();
+        formData.append('task', updatedData.task);
+        formData.append('start_time', updatedData.start_time);
+        formData.append('end_time', updatedData.end_time);
+        formData.append('color', updatedData.color);
+        formData.append('image', updatedData.image);
+
+        axios.post(AppURL.UpdateTask(id), formData)
             .then((response) => {
                 if (response.data.status === true) {
                     const updatedEvents = myEvents.map(event => {
@@ -122,19 +135,18 @@ function Agenda() {
                                 start: updatedData.start_time,
                                 end: updatedData.end_time,
                                 color: updatedData.color,
-                                image: updatedData.image,
+                                image: updatedData.image.name, // Use image name only
                             };
                         }
                         return event;
                     });
-                    window.location.reload(); // Refresh the page
                     setEvents(updatedEvents);
                     closeUpdateModal();
+                    window.location.reload(); // Refresh the page
+
                 }
             })
             .catch((error) => {
-                window.location.reload(); // Refresh the page
-
                 console.error("Error updating task:", error);
             });
     };
@@ -170,7 +182,16 @@ function Agenda() {
         setImage(e.target.files[0]);
     };
 
+    const handleImageChangeUpdate = (e) => {
+        const selectedImage = e.target.files[0];
 
+        if (selectedImage) {
+            setUpdatedTaskData((prevData) => ({
+                ...prevData,
+                image: selectedImage,
+            }));
+        }
+    };
 
 
 
@@ -329,11 +350,11 @@ function Agenda() {
                                                                         <div className="h-px w-full bg-gray-200 dark:bg-white/20 " />
                                                                         <div className="flex flex-col p-4 inline">
 
-
                                                                             <button
                                                                                 type="button"
-                                                                                onClick={() => setShowUpdateTask(true)}
-                                                                                class="inline rounded bg-info mb-2 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600 ">
+                                                                                onClick={() => openUpdateModal(event.id)}
+                                                                                className="inline rounded bg-info mb-2 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600"
+                                                                            >
                                                                                 Update Task
                                                                             </button>
                                                                             <button
@@ -436,13 +457,7 @@ function Agenda() {
                                                                             <input
                                                                                 type="file"
                                                                                 className="border rounded-lg px-3 py-2 mt-2 focus:outline-none focus:ring focus:border-emerald-500 w-full"
-                                                                                accept="image/*"
-                                                                                onChange={(e) =>
-                                                                                    setUpdatedTaskData((prevData) => ({
-                                                                                        ...prevData,
-                                                                                        image: e.target.files[0],
-                                                                                    }))
-                                                                                }
+                                                                                onChange={handleImageChangeUpdate}
                                                                             />
                                                                         </div>
                                                                         {/*footer*/}
@@ -457,7 +472,7 @@ function Agenda() {
                                                                             <button
                                                                                 className="bg-dark text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                                                                 type="button"
-                                                                                onClick={() => updateTask(event.id, updatedTaskData)}
+                                                                                onClick={() => updateTask(selectedTaskId, updatedTaskData)}
                                                                             >
                                                                                 Save Changes
                                                                             </button>

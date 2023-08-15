@@ -10,8 +10,9 @@ class AppURL {
     // Task URLs
     static GetTask = this.BaseURL + "/tasks";          // Get all tasks
     static AddTask = this.BaseURL + "/tasks";          // Add a new task
+    
     static UpdateTask(id) {                           // Update a task by ID
-        return this.BaseURL + "/tasks/" + id;
+        return this.BaseURL + "/task/" + id;
     }
     static DeleteTask(id) {                           // Delete a task by ID
         return this.BaseURL + "/tasks/" + id;
