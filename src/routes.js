@@ -11,6 +11,7 @@ import {
   MdOutlinePieChart,
   MdFileCopy,
   MdPerson,
+  MdLock,
   MdSettings
 } from "react-icons/md";
 
@@ -18,7 +19,7 @@ const routes = [
   {
     name: "Home ",
     layout: "/admin",
-    path: "",
+    path: "/",
     icon: <MdHome className="h-6 w-6" />,
     component: <MainDashboard />,
   },

@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        customYellow: "#fefde3",
+      },
       width: {
         "1p": "1%",
         "2p": "2%",

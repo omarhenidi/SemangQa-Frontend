@@ -17,36 +17,34 @@ export function SidebarLinks(props) {
     return routes.map((route, index) => {
       if (
         route.layout === "/admin" ||
-        route.layout === "/auth" 
+        route.layout === "/auth"
       ) {
         return (
           <Link key={index} to={route.layout + "/" + route.path} className="no-underline">
-            <div className="relative mb-1 flex hover:cursor-pointer no-underline">
+            <div className="relative flex hover:cursor-pointer">
               <li
-                className="my-[3px] flex cursor-pointer items-center px-8"
+                className="my-[3px] flex cursor-pointer items-center px-8 "
                 key={index}
               >
                 <span
-                  className={`${
-                    activeRoute(route.path) === true
-                      ? "font-bold text-white"
-                      : "font-medium text-gray-600"
-                  }`}
+                  className={`pb-2 ${activeRoute(route.path) === true
+                    ? "font-bold text-customYellow"
+                    : "font-medium text-gray-400"
+                    }`}
                 >
-                  {route.icon ? route.icon : < ></>}{" "}
+                  {route.icon}
                 </span>
                 <p
-                  className={`leading-1 ml-4 flex ${
-                    activeRoute(route.path) === true
-                      ? "font-bold text-white"
-                      : "font-medium text-gray-600"
-                  }`}
+                  className={`leading-1 ml-4 pt-2 ${activeRoute(route.path) === true
+                    ? "font-bold text-customYellow "
+                    : "font-medium text-gray-400"
+                    }`}
                 >
                   {route.name}
                 </p>
               </li>
               {activeRoute(route.path) ? (
-                <div class="absolute right-0 top-px h-9 w-1 rounded-lg bg-white" />
+                <div class="absolute mt-6 h-1 w-1 ml-4 bg-customYellow" />
               ) : null}
             </div>
           </Link>

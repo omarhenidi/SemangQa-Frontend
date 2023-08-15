@@ -35,7 +35,7 @@ class Sidebar extends Component {
         </span>
 
         <div className={`mx-[30px] mt-[50px] flex items-center`}>
-          <div className="mt-1 ml-1 h-2.5 font-poppins text-[26px] font-bold uppercase text-white">
+          <div className="mt-1 ml-8 h-2.5 font-poppins text-[18px] font-bold uppercase text-white">
             SemangQa
           </div>
         </div>
@@ -48,11 +48,11 @@ class Sidebar extends Component {
 
         <div className="items-center ml-5 mt-2 text-center">
           <h5>  {user && (
-            <div className="text-[26px] font-bold uppercase text-white text-center">
+            <div className="text-[18px] font-bold uppercase text-white text-center">
               {user.name}
             </div>
           )}</h5>
-          <h6 className="text-white">Graphic Designer</h6>
+          <h6 className="text-gray-400 text-[16px]">Graphic Designer</h6>
         </div>
 
         {/* Nav item */}
@@ -62,15 +62,15 @@ class Sidebar extends Component {
 
 
         <Link className="no-underline" onClick={this.logout} >
-          <div className="">
+          <div className="mb-1 flex hover:cursor-pointer no-underline">
             <li
               className="my-[3px] flex cursor-pointer items-center px-8"
             >
-              <span className="leading-1 ml-4 flex font-bold text-white text-md">
-                <MdOutlineLogout className="h-4 w-4" />
+              <span className="leading-1 ml-7 flex font-bold text-gray-400 text-md">
+                <MdOutlineLogout className="h-6 w-6" />
               </span>
               <span
-                className={"leading-1 ml-2 flex font-bold text-white"}
+                className="ml-3 flex text-gray-400"
               >
                 Logout
               </span>
