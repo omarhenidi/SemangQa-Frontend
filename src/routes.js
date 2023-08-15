@@ -19,16 +19,16 @@ const routes = [
   {
     name: "Home ",
     layout: "/admin",
-    path: "/",
+    path: "/adminn",
     icon: <MdHome className="h-6 w-6" />,
     component: <MainDashboard />,
   },
   {
     name: "Dashboard",
     layout: "/admin",
-    path: "nft-marketplace",
+    path: "/",
     icon: <MdOutlinePieChart className="h-6 w-6" />,
-    // component: <NFTMarketplace />,
+    component: <MainDashboard />,
     secondary: true,
   },
   {
@@ -42,7 +42,7 @@ const routes = [
   {
     name: "Settings",
     layout: "/auth",
-    path: "sign-in",
+    path: "settings",
     icon: <MdSettings className="h-6 w-6" />,
     // component: < />,
   },

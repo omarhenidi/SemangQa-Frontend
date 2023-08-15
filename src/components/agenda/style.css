@@ -1,0 +1,111 @@
+.md-full-event {
+
+    width: 100%;
+    padding: 10px 0;
+    /* background-color: #FEFDE3; */
+    height: 73px;
+    border-radius: 75px;
+
+
+}
+
+.md-full-event-img {
+    width: 46px;
+    border-radius: 30px;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 20px; */
+    background-color: #000;
+}
+
+.mbsc-ios.mbsc-schedule-date-header-text {
+
+    display: none;
+}
+
+.mbsc-ios.mbsc-schedule-date-header {
+    background: #f7f7f7;
+    border-color: #ccc;
+    border: none;
+}
+
+.mbsc-calendar-controls {
+    align-items: center;
+    box-sizing: content-box;
+    min-height: 2.5em;
+    background-color: white;
+    border: none;
+}
+
+.mbsc-calendar-controls {
+    align-items: center;
+    box-sizing: content-box;
+    min-height: 2.5em;
+    background-color: white;
+
+}
+
+.md-full-event-details {
+    margin-left: 85px;
+    border: none;
+}
+
+.md-full-event-title {
+    font-size: 17px;
+    font-weight: 600;
+    /* padding-bottom: 10px; */
+    border: none;
+
+}
+
+.md-full-event-time {
+    display: inline-block;
+    line-height: 1.4;
+    border: none;
+
+}
+
+.mbsc-ios.mbsc-list-item:after,
+.mbsc-ios.mbsc-list-item:before {
+    border-top: none;
+}
+
+.mbsc-ios.mbsc-event-day.mbsc-list-header {
+    display: none;
+}
+
+.mbsc-ios.mbsc-calendar-button.mbsc-button {
+    color: #787474;
+}
+
+.mbsc-ios.mbsc-calendar-button-today {
+    font-weight: 500;
+    padding: 0;
+    /* display: none; */
+}
+
+/* .mbsc-ios.mbsc-calendar {
+    background: #fff;
+    color: #000;
+    float: right;
+}  */
+
+
+.mbsc-ios.mbsc-eventcalendar .mbsc-calendar-wrapper {
+    border: none;
+}
+
+.mbsc-ios.mbsc-event .mbsc-list-item {
+    background: #fff;
+    color: #000;
+    border: none;
+}
+
+.md-full-event-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #aaa;
+}
+
+
+/*  */
