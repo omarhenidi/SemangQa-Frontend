@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import TotalSpent from "components/totalSpent";
 import Agenda from "components/agenda";
+import AgendaU from "components/agenda/UpdateTaskModal";
 import TopCreatorTable from "components/topPerformers";
 
 import tableDataTopCreators from "variables/tableDataTopCreators.json";
@@ -17,7 +18,7 @@ class Dashboard extends Component {
         <Row>
           <Col md='7'>
             <Row>
-              <TotalSpent />
+              <TotalSpent user={User}/>
             </Row>
             <Row>
               <Col >
@@ -31,7 +32,7 @@ class Dashboard extends Component {
           </Col>
 
           <Col md='5'>
-            <Agenda />
+            <Agenda user={User}/>
           </Col>
         </Row>
       </Container>
