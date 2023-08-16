@@ -54,7 +54,7 @@ const TotalSpent = () => {
             <span className="text-sm font-medium text-dark " style={{ backgroundColor: "#FEFDE3", }}>Home</span>
           </button>
           <button className="rounded px-3 py-1 m-2 bg-dark text-white float-right	border-none	" >
-            <MdOutlineCalendarToday className="inline float-right" />
+            <MdOutlineCalendarToday className="inline float-right mt-1 ml-1" />
             <span className="text-sm font-medium text-white bg-dark inline" >This month</span>
           </button>
 
