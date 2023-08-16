@@ -184,7 +184,7 @@ function Agenda() {
                                             {eventsInHour.map((event) => (
                                                 <div className="event-item" key={event.id} >
                                                     <div className="md-full-event m-3" style={{ backgroundColor: event.color }}>
-                                                        <img className="md-full-event-img sm-font" src={event.image} alt="Event" />
+                                                        <img className="md-full-event-img sm-font mt-1" src={event.image} alt="Event" />
                                                         <div className="float-right">
                                                             <Dropdown
                                                                 button={
