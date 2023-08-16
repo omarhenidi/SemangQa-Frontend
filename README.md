@@ -38,12 +38,12 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/SemangQa.git
+   git clone https://github.com/omarhenedi/SemangQa-Frontend.git
 
 2. Clone the repository:
 
    ```bash
-   cd SemangQa
+   cd SemangQa-Frontend
 
 3. Install the dependencies:
 
@@ -88,9 +88,7 @@ Contributions are welcome! To contribute to SemangQa, follow these steps:
 
 Please follow our Code of Conduct when contributing.
 
-### License
 
-This project is licensed under the MIT License.
 
 
 
