@@ -177,7 +177,7 @@ function Agenda() {
                                 return (
                                     <div key={hour} className="z-40 hour-events">
                                         <div className="flex items-center mt-3">
-                                            <h6 className="mr-2">{hour}.00</h6>
+                                            <h4 className="mr-2">{hour}.00</h4>
                                             <div className="flex-1 border-t border-dashed border-gray-700 "></div>
                                         </div>
                                         <div className="events-in-hour">
