@@ -2,8 +2,8 @@ import React from "react";
 import {
   MdOutlineCalendarToday,
 
-  MdOutlineSearch
-
+  MdOutlineSearch,
+  MdExpandMore
 } from "react-icons/md";
 import {
   lineChartDataTotalSpent,
@@ -51,7 +51,9 @@ const TotalSpent = () => {
       <div className="h-full w-full px-3 " style={{ backgroundColor: "#FEFDE3" }}>
         <div className="flex justify-between">
           <button className="rounded m-2 float-left	border-none" style={{ backgroundColor: "#FEFDE3", }}>
-            <span className="text-sm font-medium text-dark " style={{ backgroundColor: "#FEFDE3", }}>Home</span>
+            <span className="text-sm font-medium text-dark inline" style={{ backgroundColor: "#FEFDE3", }}>Home</span>
+            <MdExpandMore className="inline float-right mt-1" />
+
           </button>
           <button className="rounded px-3 py-1 m-2 bg-dark text-white float-right	border-none	" >
             <MdOutlineCalendarToday className="inline float-right mt-1 ml-1" />
